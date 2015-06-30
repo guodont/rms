@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # success
       log_in user
-      redirect_to user
+      redirect_back_or user
     else
       # false
       flash.now[:danger] = '邮箱或密码错误'

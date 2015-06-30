@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   #validates :phone, presence: false, length: { maximum: 11 },
   #                  format: { with: VALID_PHONE_REGEX }
   has_secure_password
-  validates :password, length: { minimum: 6 }
+  validates :password, length: { minimum: 6 }, allow_blank: true
   
 end
