@@ -28,4 +28,5 @@ end
 group :production do
   gem 'mysql2', '~> 0.3.18'
   gem 'rails_12factor', '0.0.2'
+  gem 'unicorn',        '4.8.3'
 end

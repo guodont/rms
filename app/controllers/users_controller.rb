@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "注册成功，欢迎进入毕业生档案管理系统"
       redirect_to @user # 处理注册成功的情况
     else
