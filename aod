@@ -30,8 +30,8 @@
 	
 ##
 
-学生信息(id,name,sex,nation,birthday,politicalStatus,placeOfOrigin,graduationCardNumber,
-degreeCertificateNumber,college,class,major,photoUrl,entryDate,updateDate)
+学生信息(id,name,sex,nation,birthday,politicalStatus,placeOfOrigin,graduationCardNum,
+degreeCertificateNum,college,class,major,photoUrl,entryDate,updateDate)
 
 	学号 | 姓名 | 性别 | 民族 | 生日 |  政治面貌 | 生源所在地 | 毕业证号 |
 	学位证号 | 院系 | 班级 | 专业 | 照片 | 录入日期 | 更新日期
@@ -43,3 +43,10 @@ degreeCertificateNumber,college,class,major,photoUrl,entryDate,updateDate)
 专业(id,collegeId,major)
 班级(id,collegeId,majorid,class)
 档案材料(id,type,material,remark)
+
+##页面
+
+登录页面
+后台管理页面
+查询页面
+录入，更新页面
