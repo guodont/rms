@@ -1,0 +1,2 @@
+    <%= f.select :college, College.all.collect { |p| [ p.name, p.name ] },options = { :onChange => remote_function( :update => "college_major_box", :url => { :action => "college_major_select" }, :with => "id=1")} %>
+    <%= render :partial => 'majors' %>

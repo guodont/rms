@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>档案材料信息列表</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>编号</th>
+      <th>名称</th>
+      <th>类别</th>
+      <th>备注</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @materials.each do |material| %>
+      <tr>
+        <td><%= material.id %></td>
+        <td><%= material.name %></td>
+        <td><%= material.cate %></td>
+        <td><%= material.remark %></td>
+       
+        <td><%= link_to '更新', edit_material_path(material) %></td>
+        <td><%= link_to '删除', material, method: :delete, data: { confirm: '确认删除吗？' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '创建新的档案材料', new_material_path %>

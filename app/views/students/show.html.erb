@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @student.gender %>
+</p>
+
+<p>
+  <strong>Nation:</strong>
+  <%= @student.nation %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @student.birthday %>
+</p>
+
+<p>
+  <strong>Politcs:</strong>
+  <%= @student.politcs %>
+</p>
+
+<p>
+  <strong>Diplomano:</strong>
+  <%= @student.diplomano %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @student.college %>
+</p>
+
+<p>
+  <strong>Classname:</strong>
+  <%= @student.classname %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @student.major %>
+</p>
+
+<p>
+  <strong>Studentno:</strong>
+  <%= @student.studentno %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @student.address %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @student.img %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
+
+<%= render partial: 'archives/form', locals: {student: @student} %>

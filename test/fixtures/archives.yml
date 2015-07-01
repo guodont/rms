@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  archiveno: MyString
+  jiyaono: MyString
+  issend: false
+  sendway: MyString
+  isduyan: false
+  firstsend: MyString
+  secondsend: MyString
+  hmaterial: MyString
+  umaterial: MyString
+  mmaterial: MyString
+  dmaterial: MyString
+  pmaterial: MyString
+  omaterial: MyString
+  zmaterial: MyString
+  remark: MyString
+
+two:
+  archiveno: MyString
+  jiyaono: MyString
+  issend: false
+  sendway: MyString
+  isduyan: false
+  firstsend: MyString
+  secondsend: MyString
+  hmaterial: MyString
+  umaterial: MyString
+  mmaterial: MyString
+  dmaterial: MyString
+  pmaterial: MyString
+  omaterial: MyString
+  zmaterial: MyString
+  remark: MyString

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>班级列表</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>编号</th>
+      <th>名称</th>
+      <th>所属专业</th>
+      <th colspan="2">操作</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classses.each do |classs| %>
+      <tr>
+        <td><%= classs.id %></td>
+        <td><%= classs.name %></td>
+        <td><%= classs.major.name %></td>
+        <td><%= link_to '编辑', edit_classs_path(classs) %></td>
+        <td><%= link_to '删除', classs, method: :delete, data: { confirm: '确定要删除吗？' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '创建一个新的班级', new_classs_path %>

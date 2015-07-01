@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
-  before_action :admin_user,     only: :destroy
+  before_action :admin_user,     only: [:destroy, :create, :new]
   
   def index
     @users = User.paginate(page: params[:page])
@@ -54,24 +54,6 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :phone, :password,:password_confirmation)
     end
     
-    # 确保用户已登录
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "请登录"
-        redirect_to login_url
-      end
-    end
     
-    # 确保是正确的用户
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
-    
-    # 确保是管理员
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
     
 end

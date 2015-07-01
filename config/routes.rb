@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
   
+  
+
+
+  resources :materials
+
+  resources :students
+
+  resources :archives
+
+  get 'materials/new'
+
+  #get 'material/new'
+
+  get 'archives/new'
+
+  get 'students/new'
+
   get 'sessions/new'
 
   get 'users/new'
@@ -14,7 +31,20 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get 'settings' => 'static_pages#settings'
+  
+  #archive
+  get '/students/:student_id/archive' => "archives#show"
+  post '/students/:student_id/archive' => "archives#create"
+  
+  
   resources :users
+  
+  resources :classses
+
+  resources :majors
+
+  resources :colleges
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

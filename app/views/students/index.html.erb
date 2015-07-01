@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Students</h1>
+<table>
+  <tr>
+    <form class="form-search">
+    <th>
+	    <input class="input-medium search-query" type="text" />
+    </th>
+    <th>
+      <button type="submit" class="btn">查找</button>
+    </th>
+    </form>
+  </tr>
+</table>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>性别</th>
+      <th>民族</th>
+      <th>出生年月</th>
+      <th>政治面貌</th>
+      <th>毕证号</th>
+      <th>学院</th>
+      <th>班级</th>
+      <th>专业</th>
+      <th>学号</th>
+      <th>生源地址</th>
+      <th>照片</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.gender %></td>
+        <td><%= student.nation %></td>
+        <td><%= student.birthday %></td>
+        <td><%= student.politcs %></td>
+        <td><%= student.diplomano %></td>
+        <td><%= student.college %></td>
+        <td><%= student.classname %></td>
+        <td><%= student.major %></td>
+        <td><%= student.studentno %></td>
+        <td><%= student.address %></td>
+        <td><%= student.img %></td>
+        <td><%= link_to '查看', student %></td>
+        <td><%= link_to '档案信息', student %></td>
+        <td><%= link_to '编辑', edit_student_path(student) %></td>
+        <td><%= link_to '删除', student, method: :delete, data: { confirm: '确定要删除吗?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>

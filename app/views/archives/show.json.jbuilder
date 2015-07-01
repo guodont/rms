@@ -1,0 +1,1 @@
+json.extract! @archive, :id, :archiveno, :jiyaono, :issend, :sendway, :isduyan, :firstsend, :secondsend, :hmaterial, :umaterial, :mmaterial, :dmaterial, :pmaterial, :omaterial, :zmaterial, :remark, :created_at, :updated_at

@@ -1,0 +1,69 @@
+<%= form_tag("/students/#{student.id}/archive", method: :post) do  %>
+
+
+  <div class="field">
+    <%= label_tag :archiveno, "档案号" %><br>
+    <%= text_field_tag(:archiveno) %>
+  </div>
+  
+  <div class="field">
+    <%= label_tag :jiyaono, "机要" %><br>
+    <%= text_field_tag(:jiyaono) %>
+
+  </div>
+  <div class="field">
+    <%= label_tag :issend, "是否已调"%><br>
+    <%= check_box_tag(:issend) %>
+  </div>
+  <div class="field">
+    <%= label_tag :sendway, "调档方式" %><br>
+    <%= text_field_tag(:sendway) %>
+  </div>
+  <div class="field">
+    <%= label_tag :isduyan, "是否读研" %><br>
+    <%= check_box_tag(:isduyan) %>
+  </div>
+  <div class="field">
+    <%= label_tag :firstsend, "一次调档" %><br>
+    <%= text_field_tag(:firstsend) %>
+  </div>
+  <div class="field">
+    <%= label_tag :secondsend, "二次调档" %><br>
+    <%= text_field_tag(:secondsend) %>
+  </div>
+  <div class="field">
+    <%= label_tag :hmaterial, "高中材料" %><br>
+    <%= text_field_tag(:hmaterial) %>
+  </div>
+  <div class="field">
+    <%= label_tag :umaterial, "本科材料" %><br>
+    <%= text_field_tag(:umaterial) %>
+  </div>
+  <div class="field">
+    <%= label_tag :mmaterial, "硕士材料" %><br>
+    <%= text_field_tag(:mmaterial) %>
+  </div>
+  <div class="field">
+    <%= label_tag :dmaterial, "博士材料" %><br>
+    <%= text_field_tag(:dmaterial) %>
+  </div>
+  <div class="field">
+    <%= label_tag :pmaterial, "党员材料"%><br>
+    <%= text_field_tag(:pmaterial) %>
+  </div>
+  <div class="field">
+    <%= label_tag :omaterial, "其他材料" %><br>
+    <%= text_field_tag(:omaterial) %>
+  </div>
+  <div class="field">
+    <%= label_tag :zmaterial, "专升本材料" %><br>
+    <%= text_field_tag(:zmaterial) %>
+  </div>
+  <div class="field">
+    <%= label_tag :remark, "备注" %><br>
+    <%= text_field_tag(:remark) %>
+  </div>
+  <div class="actions">
+    <%= submit_tag '提交', class: 'btn btn-primary btn-submit' %>
+  </div>
+<% end %>
