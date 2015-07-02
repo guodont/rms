@@ -1,6 +1,19 @@
 <div class="center jumbotron">
   <h1>毕业生档案管理系统</h1>
 
-
 </div>
-
+<div class="container">
+  <div class="home_tool">
+    <div class="row">
+      <div class="col-md-4 tool_box">
+        <%= link_to "档案查询", students_path %>
+      </div>
+      <div class="col-md-4 tool_box">
+        <%= link_to "档案录入", students_new_path %>
+      </div>
+      <div class="col-md-4 tool_box">
+        <%= link_to "档案统计", archives_path %>
+      </div>
+    </div>
+  </div>  
+</div>
